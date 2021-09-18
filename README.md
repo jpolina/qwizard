@@ -1,10 +1,6 @@
-# Voiceflow API Node.js Example
+# Voiceflow Study Helper
 
-Set up your Voiceflow project with Node.js in a matter of minutes.
-Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
-This example can be adapted to run as an HTTP server.
-
-This example lets you chat with your project via the terminal.
+This voiceflow project takes in the questions and answers that you want to study, and then quizzes you on them. You can chat with your project via the terminal.
 
 ## Documentation
 
@@ -14,7 +10,7 @@ For additional information about the Voiceflow API, visit the [documentation](ht
 
 1. If you do not have node, install _Node.js_ and _npm_ from [nodejs.org](https://nodejs.org/), or follow an equivalent guide.
 2. In this folder, run `npm install`.
-3. Replace `'YOUR_API_KEY_HERE'` and `'YOUR_VERSION_ID_HERE'` in `index.js` with your API Key and Voiceflow project version ID.
+3. Replace `'process.env.API_KEY'` in `index.js` with your API Key.
    You can find them under the integrations tab:
 
    <img src="https://user-images.githubusercontent.com/5643574/129422436-04d964d3-85a0-402d-ae5e-d6e84723da5e.png" width=800 />
@@ -28,19 +24,49 @@ What it might look like in action:
 ```
 $ npm start
 
-> What is your name?: tyler
-what can I do for you?
+> What is your name?: Jonathan
 ...
-> Say something: send email
-who is the recipient?
+Welcome back to the study guide. To begin, say the first question you want to study.
+> Say something: In what year did World War II end?
 ...
-> Say something: tyler@voiceflow.com
-what is the title of your email?
+Enter the answer to this question.
+> Say something: 1945
 ...
-> Say something: How was your day?
-sending the email for tyler@voiceflow.com called "How was your day?". Is that correct?
+To add another question, enter the question. Otherwise, if you are ready to start the test, say 'Start'.
+> Say something: What is 4+3?
 ...
-> Say something: yes
-successfully sent the email for tyler@voiceflow.com called "How was your day?"
+Enter the answer to this question.
+> Say something: 7
+...
+To add another question, enter the question. Otherwise, if you are ready to start the test, say 'Start'.
+> Say something: What is the color of grass?
+...
+Enter the answer to this question.
+> Say something: green
+...
+To add another question, enter the question. Otherwise, if you are ready to start the test, say 'Start'.
+> Say something: start
+...
+Your first question is:
+What is the color of grass? 
+> Say something: red
+...
+Wrong. The answer is: green. 1 out of 3 completed.
+Here's your next question
+What is 4+3? 
+> Say something: 7
+...
+Correct!
+2 out of 3 completed
+Here's your next question
+In what year did World War II end? 
+> Say something: 1945
+...
+Correct!
+3 out of 3 completed
+We've now come to the end of the exam. 
+For your final score, you answered 2 out of 3 questions correctly. If you want to run through the exam again, just say "try again". 
+> Say something: exit
+...
 The end! Start me again with `npm start`
 ```
