@@ -26,7 +26,8 @@ $ npm start
 
 > What is your name?: Jonathan
 ...
-Welcome back to the study guide. To begin, say the first question you want to study.
+Welcome to your personal study guide. To use this guide, you will be first prompted to enter the questions and answers you would like to study. Then, you will be tested on these questions in a random order once you are ready. To stop the program, say stop at any time.
+To begin, say the first question you want to study.
 > Say something: In what year did World War II end?
 ...
 Enter the answer to this question.
